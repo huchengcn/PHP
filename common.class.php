@@ -18,6 +18,15 @@ class Common extends BaseClass{
 		}
 	}
 
+    /**
+    *在线二维码接口平台
+    */
+	public function generateQRfromGoogle($goods_id, $widhtHeight = '100', $EC_level = 'L', $margin = '0') {
+        $url = 'http://www.elmsc.com'.'/index.php?app=goods&id='.$goods_id;
+        $url = urlencode($url);
+        return '<img src="http://qr.liantu.com/api.php?bg=ffffff&fg=000000&gc=000000&el=l&w=150&m=10&text=' . $url . '" alt="QR code" widhtHeight="' . $widhtHeight . '" widhtHeight="' . $widhtHeight . '"/>';
+    }
+
 
 
 
